@@ -1,0 +1,39 @@
+.buttonDiv{
+  position: absolute;
+  bottom: 3%;
+  text-align: center;
+  align-content: center;
+  left: 0;
+  right: 0;
+}
+.modeDiv{
+  text-align: center;
+}
+.questionCard{
+  height: auto;
+  width: auto;
+}
+.questionText{
+  font-size: 20px;
+}
+.inputCard{
+  text-align: center;
+}
+.answerCard{
+  display: none;
+}
+.answerText{
+  font-size: 20px;
+}
+.inputDiv{
+  display: flex;
+}
+.inputView{
+  float: left;
+}
+#option{
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  display: none;
+}

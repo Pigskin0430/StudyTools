@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      党史100题知识问答（测试版）
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-card-content class="questionCard">
+      <ion-text id="questionText" class="questionText"></ion-text>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="inputCard">
+    <ion-item class="inputItem">
+      <ion-label position="floating">请输入答案</ion-label>
+      <div class="inputDiv">
+        <div class="inputView"><ion-input [(ngModel)]="inputValue"></ion-input></div>
+        <div><ion-chip id="option" [color]="isCheck===true? 'success' : 'danger'" slot="end">错误</ion-chip></div>
+      </div>
+    </ion-item>
+  </ion-card>
+  <ion-card id="answerCard" class="answerCard">
+    <ion-card-content>
+      <ion-text id="answerText" class="answerText"></ion-text>
+    </ion-card-content>
+  </ion-card>
+  <div class="modeDiv">
+    <ion-button (click)="allQuestion()" color="primary">完整100题</ion-button>
+    <ion-button (click)="randomQuestion(true , 40)" color="secondary">随机40题</ion-button>
+    <ion-button (click)="randomQuestion(true , 10)"  color="success">随机10题</ion-button>
+  </div>
+    <div class="buttonDiv">
+      <ion-button (click)="setQuestion(false)" color="warning">上一题</ion-button>
+      <ion-button color="secondary" (click)="checkAnswer()">检查</ion-button>
+      <ion-button color="danger" (click)="seeAnnswer()">答案</ion-button>
+      <ion-button (click)="setQuestion(true)" color="success">下一题</ion-button>
+    </div>
+  <script type="text/javascript" src="../../assets/100.json"></script>
+</ion-content>
